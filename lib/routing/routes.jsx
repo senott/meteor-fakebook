@@ -7,7 +7,7 @@ privateRoutes = FlowRouter.group({
 publicRoutes.route('/',{
   name:'Home',
   action:function(){
-    ReactLayout.render(HomeLayout,{})
+    ReactLayout.render(Homelayout,{})
   }
 });
 privateRoutes.route('/dashboard',{
