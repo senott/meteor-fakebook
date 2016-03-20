@@ -34,4 +34,4 @@ Signupform = React.createClass({
       </div>
     )
   }
-})
+});
