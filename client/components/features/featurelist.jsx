@@ -1,8 +1,11 @@
 Featurelist = React.createClass({
   features:[
-    {icon:"fa fa-image fa-2x", bigtext:"See photos and updates", littletext:"from firends in News Feed"},
-    {icon:"fa fa-share fa-2x", bigtext:"Share what\'s new", littletext:"in your life in your Time Line"},
-    {icon:"fa fa-search fa-2x", bigtext:"Find more", littletext:"of what you\'re lookinf for with Fakebook search"}
+    {icon:"fa fa-image fa-2x", bigtext:"See photos and updates",
+      littletext:"from firends in News Feed"},
+    {icon:"fa fa-share fa-2x", bigtext:"Share what\'s new",
+      littletext:"in your life in your Time Line"},
+    {icon:"fa fa-search fa-2x", bigtext:"Find more",
+      littletext:"of what you\'re lookinf for with Fakebook search"}
   ],
   render(){
     var rows = this.features.map(function(feature){
