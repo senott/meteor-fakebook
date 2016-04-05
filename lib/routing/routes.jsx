@@ -25,10 +25,19 @@ privateRoutes.route('/dashboard',{
   }
 });
 publicRoutes.route('/signout', {
-  name:"signout",
+  name:"Signout",
   action:function(){
     Meteor.logout(function(){
       FlowRouter.go('/');
+    })
+  }
+});
+privateRoutes.route('/profile', {
+  name: 'Profile',
+  action: function(){
+    ReactLayout.render(Layout, {
+      sidebar: <Sidebar/>,
+    content: <Profile/>
     })
   }
 });
