@@ -3,7 +3,9 @@ Avatar = React.createClass({
   getMeteorData(){
     var data = {};
     data.usr = Meteor.users.findOne({_id: this.props.user});
-    data.img = Images.findOne({_id: data.usr.profile.avatar});
+    if(data.usr){
+      data.img = Images.findOne({_id: data.usr.profile.avatar});
+    }
     return data;
   },
   getInitialState(){

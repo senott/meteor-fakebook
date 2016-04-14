@@ -1,9 +1,8 @@
 Meteor.methods({
-  'Posts.insert':function(message, imageid, imageurl){
+  'Posts.insert':function(message, imageurl){
     var post = {
       user: Meteor.user(),
       createdAt: new Date(),
-      image: imageid,
       imageurl: imageurl,
       message: message,
       likes: [],
