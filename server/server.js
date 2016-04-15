@@ -17,5 +17,8 @@ Meteor.methods({
     }
     var data = file._id;
     Meteor.users.update(Meteor.userId(), {$set:{'profile.avatar':data}})
+  },
+  'likePost':function(userid, postid){
+    Posts.update(postid, {$addToSet:{likes:userid}});
   }
 });
