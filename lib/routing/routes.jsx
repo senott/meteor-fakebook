@@ -37,7 +37,16 @@ privateRoutes.route('/profile', {
   action: function(){
     ReactLayout.render(Layout, {
       sidebar: <Sidebar/>,
-    content: <Profile/>
+      content: <Profile/>
+    })
+  }
+});
+publicRoutes.route('/user/:fullname',{
+  name: 'UserHome',
+  action:function(params){
+    ReactLayout.render(Layout,{
+      sidebar: <Sidebar/>,
+      content: params.fullname ? <Home fullname={params.fullname}/>:'No user found'
     })
   }
 });
